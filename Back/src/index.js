@@ -1,11 +1,8 @@
-//import app from './app';
+import app from './app';
 
-/*async function main () {
-    await app.listen(3000);
-    console.log('Server on port 3000');
+async function main () {
+    await app.listen(4000);
+    console.log('Server on port 4000');
 };
 
-main();*/
-const hello = "hello world"
-
-console.log(hello)
+main ();
