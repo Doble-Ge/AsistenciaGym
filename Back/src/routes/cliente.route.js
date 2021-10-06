@@ -3,14 +3,14 @@ const router = Router();
 
 import { crearCliente, deleteCliente, getCliente, getOneCliente, updateCliente } from '../controllers/cliente.controller';
 
-// /api/usuarioa
+// /api/cliente
 router.post('/', crearCliente);
 router.get('/', getCliente);
 
-// /api/usuario/usuarioaID
+// /api/cliente/:[parametro]
 router.get('/:dni', getOneCliente);
 router.delete('/:dni', deleteCliente);
 router.put('/:id', updateCliente);
-//router.get('/:cuil', getOneUsuarioCuil);
+
 
 export default router;
