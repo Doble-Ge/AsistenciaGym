@@ -59,12 +59,12 @@ export async function getOneCliente(req,res){
 }
 
 
-/*export async function deleteUsuario(req,res){
+export async function deleteCliente(req,res){
     try {
-        const {id} = req.params;
-    const deleteRowCount = await Usuario.destroy({
+        const {dni} = req.params;
+    const deleteRowCount = await Cliente.destroy({
         where: {
-            id: id
+            dni: dni
         }
     });
     res.json({
@@ -76,37 +76,36 @@ export async function getOneCliente(req,res){
     }
 }
 
-/*export async function updateUsuario(req,res){
+export async function updateCliente(req,res){
     try{
         const {id} = req.params;
-    const {nombre, apellido, email, pass, cuil, perfila_id} = req.body;
+    const {nombre, apellido, dni, email, telefono} = req.body;
     
-    const usuario = await UsuarioA.findAll({
-        attributes: ['id', 'nombre', 'apellido', 'email', 'pass', 'cuil', 'perfila_id'],
+    const cliente = await Cliente.findAll({
+        attributes: ['nombre', 'apellido', 'dni', 'email', 'telefono'],
         where: {
             id: id
         }
     });
 
-    if(usuario.length > 0){
-        usuario.forEach(async usuario => {
-            await usuario.update({
-                nombre,
-                apellido,
-                email,
-                pass,
-                cuil,
-                perfila_id
+    if(cliente.length > 0){
+        cliente.forEach(async cliente => {
+            await cliente.update({
+                nombre, 
+                apellido, 
+                dni, 
+                email, 
+                telefono
             })
             
         });
     }
 
     return res.json({
-        message: "Usuario actualizado con éxito",
-        data: usuario
+        message: "Cliente actualizado con éxito",
+        data: cliente
     });
     }catch (e){
         console.log(e);
     }
-}*/
+}
