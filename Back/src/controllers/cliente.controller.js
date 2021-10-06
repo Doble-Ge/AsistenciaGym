@@ -58,6 +58,22 @@ export async function getOneCliente(req,res){
     }
 }
 
+export async function getOneClienteID(req,res){
+    try {
+        const {id} = req.params;
+    const cliente = await Cliente.findOne({
+        where: {
+            id: id
+        }
+    });
+    res.json({
+        data: cliente
+    });
+    }catch (e){
+        console.log(e);
+    }
+}
+
 
 export async function deleteCliente(req,res){
     try {
@@ -82,7 +98,7 @@ export async function updateCliente(req,res){
     const {nombre, apellido, dni, email, telefono} = req.body;
     
     const cliente = await Cliente.findAll({
-        attributes: ['nombre', 'apellido', 'dni', 'email', 'telefono'],
+        attributes: ['id', 'nombre', 'apellido', 'dni', 'email', 'telefono'],
         where: {
             id: id
         }

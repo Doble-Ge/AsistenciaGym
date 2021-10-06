@@ -56,7 +56,6 @@ export async function getOneComprobante(req,res){
     }
 }
 
-
 export async function deleteComprobante(req,res){
     try {
         const {id} = req.params;
@@ -80,7 +79,7 @@ export async function updateComprobante(req,res){
     const {fecha, monto, id_cliente} = req.body;
     
     const comprobante = await Comprobante.findAll({
-        attributes: ['fecha', 'monto', 'id_cliente'],
+        attributes: ['id', 'fecha', 'monto', 'id_cliente'],
         where: {
             id: id
         }
@@ -98,7 +97,7 @@ export async function updateComprobante(req,res){
     }
 
     return res.json({
-        message: "Cliente actualizado con éxito",
+        message: "Actualizado!",
         data: comprobante
     });
     }catch (e){

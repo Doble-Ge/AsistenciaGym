@@ -10,10 +10,7 @@ const Turno = sequelize.define('turno',{
     },
     horario: {
         type: Sequelize.TEXT
-    },
-    apellido: {
-        type: Sequelize.TEXT    
-    },
+    },   
     descripcion: {
         type: Sequelize.TEXT
     },

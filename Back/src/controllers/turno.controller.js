@@ -82,7 +82,7 @@ export async function updateTurno(req,res){
     const {horario, descripcion, id_cliente} = req.body;
     
     const turno = await Turno.findAll({
-        attributes: ['horario', 'descripcion', 'id_cliente'],
+        attributes: ['id', 'horario', 'descripcion', 'id_cliente'],
         where: {
             id: id
         }

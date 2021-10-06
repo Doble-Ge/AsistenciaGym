@@ -16,7 +16,6 @@ export async function getCuota(req,res) {
 export async function crearCuota(req, res) {
     const {dias_disponibles, dias_restantes, monto, fecha_vencimiento, descripcion_mes, id_turno} = req.body;
     try {
-
         let nuevaCuota = await Cuota.create({
             dias_disponibles, 
             dias_restantes, 
@@ -83,7 +82,7 @@ export async function updateCuota(req,res){
     const {dias_disponibles, dias_restantes, monto, fecha_vencimiento, descripcion_mes, id_turno} = req.body;
     
     const cuota = await Cuota.findAll({
-        attributes: ['dias_disponibles', 'dias_restantes', 'monto', 'fecha_vencimiento', 'descripcion_mes', 'id_turno'],
+        attributes: ['id', 'dias_disponibles', 'dias_restantes', 'monto', 'fecha_vencimiento', 'descripcion_mes', 'id_turno'],
         where: {
             id: id
         }
