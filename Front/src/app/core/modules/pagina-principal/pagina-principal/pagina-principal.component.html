@@ -1,3 +1,8 @@
-<div>
-    Holi
+<div *ngFor="let cliente of clientes">
+    <h1>Cliente</h1>
+    <h2>{{cliente.id}}</h2>
+    <h2>{{cliente.nombre}}</h2>
+    <h2>{{cliente.apellido}}</h2>
+    <h2>{{cliente.telefono}}</h2>
+    <h2>{{cliente.email}}</h2>
 </div>

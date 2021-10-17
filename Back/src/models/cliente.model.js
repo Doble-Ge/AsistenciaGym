@@ -4,7 +4,7 @@ import { sequelize } from '../database/conexion';
 import Comprobante from './comprobante.model';
 import Turno from './turno.model';
 
-const Cliente = sequelize.define('cliente',{
+const Cliente = sequelize.define('cliente', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true
@@ -13,7 +13,7 @@ const Cliente = sequelize.define('cliente',{
         type: Sequelize.TEXT
     },
     apellido: {
-        type: Sequelize.TEXT    
+        type: Sequelize.TEXT
     },
     dni: {
         type: Sequelize.INTEGER
@@ -23,9 +23,9 @@ const Cliente = sequelize.define('cliente',{
     },
     telefono: {
         type: Sequelize.INTEGER
-    },    
+    },
 }, {
-    timestamps:false
+    timestamps: false
 });
 
 /*Cliente.hasMany(Comprobante, { foreignKey: 'id_cliente', sourceKey: 'id'});
