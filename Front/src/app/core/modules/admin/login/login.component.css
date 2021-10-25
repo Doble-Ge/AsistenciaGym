@@ -1,0 +1,31 @@
+.login {
+    background-color: rgb(255, 22, 177);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.divLogin {
+    background-color: white;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}
+
+.divimgLogin {
+    padding: 10px;
+}
+
+.imgLogin {
+    width: 100%;
+}

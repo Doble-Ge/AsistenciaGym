@@ -5,7 +5,7 @@ export async function getAlumno(req,res) {
     try{
         const alumno = await Alumno.findAll();
         res.json({
-            data: alumno
+            alumno
         });
     } catch (e) {
         console.log(e);
