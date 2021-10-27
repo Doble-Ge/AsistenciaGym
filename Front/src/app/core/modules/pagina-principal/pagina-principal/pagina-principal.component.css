@@ -68,3 +68,24 @@ main>div {
     height: 180px;
     color: white;
 }
+
+/** Iconos Redes Sociales **/
+nav.redes-sociales {
+    text-align: center;
+  }
+  nav.redes-sociales a {
+    color: #ffffff;
+    font-size: 2em;
+    margin-right: 20px;
+  }
+  nav.redes-sociales a:last-child{
+    margin-right: 0;
+  }
+
+/** Mapa **/
+.mapa{
+    width: 550px;
+    height: 175px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
