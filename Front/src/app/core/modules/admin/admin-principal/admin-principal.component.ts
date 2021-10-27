@@ -3,6 +3,7 @@ import {ApiServiceService} from '../../../api-service.service'
 import {Cliente} from '../../../models/cliente'
 import {Router} from '@angular/router'
 import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-admin-principal',
   templateUrl: './admin-principal.component.html',
@@ -12,24 +13,26 @@ export class AdminPrincipalComponent implements OnInit {
   clientes!:Cliente[];
   clientePorDni!:Cliente;
   constructor(private service : ApiServiceService,
-    private routes : Router,private activeRoute: ActivatedRoute) { }
+    private routes : Router,private activeRoute: ActivatedRoute) {
+      this.service.obtenerClientes().subscribe(clientes=>{
+        console.log(clientes)
+        this.clientes=clientes;
+      })
+    }
   ngOnInit(): void {
-    this.service.obtenerClientes().subscribe(clientes =>{
-      console.log(clientes);
-      this.clientes=clientes;
-    });
+   
     
    
   }
-  
+  /*
   obtenerClientePorDni(dni:any){
     console.log(dni)
-    this.routes.navigate(['hcBWvERHhVtxfqdLn8j3LdejrxFVTU/',dni])
+    this.routes.navigate(['hcBWvERHhVtxfqdLn8j3LdejrxFVTU'])
     this.service.obtenerClientePorDni(dni).subscribe(clienteDni =>{
       console.log(clienteDni)
       this.clientePorDni = clienteDni;
     })
     
-  }
+  }*/
   
 }

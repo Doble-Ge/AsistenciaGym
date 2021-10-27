@@ -5,8 +5,8 @@ import Sequelize from 'sequelize';
 export const sequelize = new Sequelize(
     'IDS', //tipo de bd
     'postgres', //usuario
-    'admin1234', //pw    
-    //'gino1295',
+    //'admin1234', //pw    
+    'gino1295',
     {
         host: 'localhost', //donde esta alojada
         dialect: 'postgres', //el tipo de bd, no es lo mismo mysql que pg o que mariadb
