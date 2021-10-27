@@ -41,7 +41,7 @@
 </div>
 <div class="operacionesClientes">
     <div> <input type="text" placeholder="Buscar cliente" #inputDni>
-        <button class="btn btn-warning" [routerLink]="['/{inputDni.value}']">Buscar</button></div>
+        <button class="btn btn-warning" (click)="obtenerClientePorDni(inputDni.value)">Buscar</button></div>
     <div> <button class="btn btn-success">Agregar nuevo cliente</button></div>
 </div>
 <div class="tablaClientes">
@@ -66,6 +66,32 @@
                     <td>{{cliente.dni}}</td>
                     <td>{{cliente.email}}</td>
                     <td>{{cliente.telefono}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+    <div class="container ">
+        <table class="table table-dark ">
+            <thead>
+                <tr>
+                    <th scope="col ">ID</th>
+                    <th scope="col ">Nombre</th>
+                    <th scope="col ">Apellido</th>
+                    <th scope="col ">Dni</th>
+                    <th scope="col ">Email</th>
+                    <th scope="col ">Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row "></th>
+                    <td>{{clientePorDni.nombre}}</td>
+                    <td>{{clientePorDni.apellido}}</td>
+                    <td>{{clientePorDni.dni}}</td>
+                    <td>{{clientePorDni.email}}</td>
+                    <td>{{clientePorDni.telefono}}</td>
                 </tr>
             </tbody>
         </table>
