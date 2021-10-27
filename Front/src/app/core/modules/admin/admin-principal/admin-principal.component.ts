@@ -10,29 +10,31 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./admin-principal.component.css']
 })
 export class AdminPrincipalComponent implements OnInit {
-  clientes!:Cliente[];
+  arrayClientes!:Cliente[];
   clientePorDni!:Cliente;
   constructor(private service : ApiServiceService,
     private routes : Router,private activeRoute: ActivatedRoute) {
-      this.service.obtenerClientes().subscribe(clientes=>{
-        console.log(clientes)
-        this.clientes=clientes;
-      })
     }
   ngOnInit(): void {
-   
-    
+   this.obtenerTodoslosClientes()
+   this.arrayClientes=[];
    
   }
-  /*
+  obtenerTodoslosClientes(){
+    this.service.obtenerClientes().subscribe((clientes)=>{
+      //console.log(clientes)
+      this.arrayClientes=clientes
+      console.log(this.arrayClientes)
+    })
+  }
+  
   obtenerClientePorDni(dni:any){
     console.log(dni)
-    this.routes.navigate(['hcBWvERHhVtxfqdLn8j3LdejrxFVTU'])
     this.service.obtenerClientePorDni(dni).subscribe(clienteDni =>{
       console.log(clienteDni)
       this.clientePorDni = clienteDni;
     })
     
-  }*/
   
+}
 }
