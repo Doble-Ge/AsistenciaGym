@@ -48,9 +48,7 @@ export async function getOneCliente(req, res) {
                 dni: dni
             }
         });
-        res.json({
-            data: cliente
-        });
+        res.json(cliente);
     } catch (e) {
         console.log(e);
     }

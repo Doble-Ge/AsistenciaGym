@@ -13,4 +13,7 @@ export class ApiServiceService {
    obtenerClientes():Observable<Cliente[]>{
      return this.http.get<Cliente[]>(this.url+'api/cliente')
    }
+   obtenerClientePorDni():Observable<Cliente>{
+    return this.http.get<Cliente>(this.url+'api/cliente/:dni');
+   }
 }

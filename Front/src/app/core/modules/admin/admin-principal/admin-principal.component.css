@@ -36,15 +36,26 @@ nav>ul>a {
     justify-content: space-around;
     align-items: center;
     height: 250px;
-    border: 2px solid green;
     background-color: aquamarine;
 }
 
 .estadisticasClientes>div {
+    background-color: white;
     height: 200px;
     width: 300px;
     border: 1px solid black;
     text-align: center;
-    text-decoration: underline;
     border-radius: 18px;
+}
+
+.operacionesClientes {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 5px solid black;
+    padding: 15px;
+}
+
+.operacionesClientes>div>input {
+    margin-right: 5px;
 }

@@ -17,17 +17,28 @@
     <div class="estadisticasClientes">
         <div>
             <h5>Clientes que ingresaron el ultimo mes</h5>
+            <p>Realizar consulta sql</p>
+            <a href="">Click aqui</a>
         </div>
         <div>
             <h5>Clientes que ingresaron el ultimo año</h5>
+            <p>Realizar consulta sql</p>
+            <a href="">Click aqui</a>
         </div>
         <div>
             <h5>Clientes que deben la ultima cuota</h5>
+            <p>Realizar consulta sql</p>
+            <a href="">Click aqui</a>
         </div>
     </div>
 </div>
-<div>
-    <h3 style="text-align: center;margin-top: 15px;">Listado de clientes</h3>
+<div class="operacionesClientes">
+    <div> <input type="text" placeholder="Buscar cliente" #inputDni>
+        <button class="btn btn-warning" [routerLink]="['/{inputDni.value}']">Buscar</button></div>
+    <div> <button class="btn btn-success">Agregar nuevo cliente</button></div>
+</div>
+<div class="tablaClientes">
+    <h3 style="text-align: center;margin-top: 15px;">Planilla de clientes</h3>
     <div class="container ">
         <table class="table table-dark ">
             <thead>
