@@ -7,8 +7,8 @@
             <ul>
                 <a href="">Inicio</a>
                 <a href="">Promociones</a>
-                <a href="">Clientes</a>
                 <a href="">Contacto</a>
+                <a href="" [routerLink]="['/admin']">Login</a>
             </ul>
         </nav>
     </div>
@@ -38,18 +38,7 @@
     <div>Nuestros profesores</div>
     <div>Membresias</div>
 </main>
-<div *ngFor="let cliente of clientes">
-    <h1>Cliente</h1>
-    <h2>{{cliente.id}}</h2>
-    <h2>{{cliente.nombre}}</h2>
-    <h2>{{cliente.apellido}}</h2>
-    <h2>{{cliente.telefono}}</h2>
-    <h2>{{cliente.email}}</h2>
 
-
-
-
-</div>
 <footer class="footer">
     <div class="secciones">
         <div>Enlaces rapidos</div>

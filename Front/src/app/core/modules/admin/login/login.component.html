@@ -4,9 +4,9 @@
             <img src="https://image.freepik.com/iconos-gratis/la-imagen-del-usuario-con-el-fondo-negro_318-34564.jpg" alt="" class="imgLogin">
         </div>
 
-        <input type="text" class="" placeholder="Usuario">
-        <input type="text" class="" placeholder="Contraseña">
-        <button class="btn btn-success">Ingresar</button>
+        <input type="text" class="" placeholder="Usuario" #inputNombre>
+        <input type="password" class="" placeholder="Contraseña" #inputPassword>
+        <button class="btn btn-success" (click)="confirmarLogin(inputNombre.value,inputPassword.value)">Ingresar</button>
 
 
 

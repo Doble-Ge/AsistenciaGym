@@ -1,0 +1,50 @@
+.header {
+    width: 100%;
+}
+
+.menu {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.8;
+}
+
+.navegacion {
+    border-bottom: 5px solid black;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: end;
+}
+
+nav>ul>a {
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.estadisticasClientes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    border: 2px solid green;
+    background-color: aquamarine;
+}
+
+.estadisticasClientes>div {
+    height: 200px;
+    width: 300px;
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: underline;
+    border-radius: 18px;
+}
