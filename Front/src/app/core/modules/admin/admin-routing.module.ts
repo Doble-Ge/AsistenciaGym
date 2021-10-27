@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [{path:'admin',component:LoginComponent}
 ,{path:'hcBWvERHhVtxfqdLn8j3LdejrxFVTU',component:AdminPrincipalComponent},
-{path:'api/cliente/:dni'}];
+{path:'hcBWvERHhVtxfqdLn8j3LdejrxFVTU/:dni',component:AdminPrincipalComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

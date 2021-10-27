@@ -1,7 +1,7 @@
 <header class="header">
     <div class="menu">
         <div style="margin-left: 15px;">
-            <h1 style="color: white;">GymGino</h1>
+            <h1 style="color: white;">GymPowerLr</h1>
         </div>
 
         <nav class="redes-sociales">
@@ -40,12 +40,36 @@
     </div>
 </div>
 <div class="operacionesClientes">
-    <div> <input type="text" placeholder="Buscar cliente" #inputDni>
+    <div> <input type="text" placeholder="Buscar cliente por Dni" #inputDni>
         <button class="btn btn-warning" (click)="obtenerClientePorDni(inputDni.value)">Buscar</button></div>
     <div> <button class="btn btn-success">Agregar nuevo cliente</button></div>
 </div>
-<div class="tablaClientes">
-    <h3 style="text-align: center;margin-top: 15px;">Planilla de clientes</h3>
+<div class="container">
+    <table class="table table-dark ">
+        <thead>
+            <tr>
+                <th scope="col ">ID</th>
+                <th scope="col ">Nombre</th>
+                <th scope="col ">Apellido</th>
+                <th scope="col ">Dni</th>
+                <th scope="col ">Email</th>
+                <th scope="col ">Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{clientePorDni.id}}</td>
+                <td>{{clientePorDni.nombre}}</td>
+                <td>{{clientePorDni.apellido}}</td>
+                <td>{{clientePorDni.dni}}</td>
+                <td>{{clientePorDni.email}}</td>
+                <td>{{clientePorDni.telefono}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="tablaClientes ">
+    <h3 style="text-align: center;margin-top: 15px; ">Planilla de clientes</h3>
     <div class="container ">
         <table class="table table-dark ">
             <thead>
@@ -59,7 +83,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let cliente of clientes">
+                <tr *ngFor="let cliente of clientes ">
                     <th scope="row ">{{cliente.id}}</th>
                     <td>{{cliente.nombre}}</td>
                     <td>{{cliente.apellido}}</td>

@@ -10,7 +10,7 @@
 .menu {
     background-color: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     opacity: 0.8;
 }
 
@@ -69,21 +69,27 @@ main>div {
     color: white;
 }
 
+
 /** Iconos Redes Sociales **/
+
 nav.redes-sociales {
     text-align: center;
-  }
-  nav.redes-sociales a {
+}
+
+nav.redes-sociales a {
     color: #ffffff;
     font-size: 2em;
     margin-right: 20px;
-  }
-  nav.redes-sociales a:last-child{
-    margin-right: 0;
-  }
+}
+
+nav.redes-sociales a:last-child {
+    margin-right: 10px;
+}
+
 
 /** Mapa **/
-.mapa{
+
+.mapa {
     width: 550px;
     height: 175px;
     margin-top: 10px;

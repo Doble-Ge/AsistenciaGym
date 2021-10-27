@@ -21,12 +21,13 @@ export class AdminPrincipalComponent implements OnInit {
     
    
   }
+  
   obtenerClientePorDni(dni:any){
     console.log(dni)
-    this.routes.navigate(['api/cliente/',dni])
+    this.routes.navigate(['hcBWvERHhVtxfqdLn8j3LdejrxFVTU/',dni])
     this.service.obtenerClientePorDni(dni).subscribe(clienteDni =>{
       console.log(clienteDni)
-      this.clientePorDni = clienteDni
+      this.clientePorDni = clienteDni;
     })
     
   }
