@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 import { LoginComponent } from './login/login.component';
 import { AdminPrincipalComponent } from './admin-principal/admin-principal.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { CrearClienteComponent } from './crear-cliente/crear-cliente.component'
 
 @NgModule({
   declarations: [
     LoginComponent,
-    AdminPrincipalComponent
+    AdminPrincipalComponent,
+    CrearClienteComponent
   ],
   imports: [
     CommonModule,

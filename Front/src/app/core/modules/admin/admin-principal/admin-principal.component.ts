@@ -12,20 +12,17 @@ import { ActivatedRoute } from '@angular/router';
 export class AdminPrincipalComponent implements OnInit {
   arrayClientes!:Cliente[];
   clientePorDni!:Cliente;
+  arrayClientesDni!:Cliente[];
   constructor(private service : ApiServiceService,
     private routes : Router,private activeRoute: ActivatedRoute) {
     }
   ngOnInit(): void {
-   this.obtenerTodoslosClientes()
-   this.arrayClientes=[];
-   
-  }
-  obtenerTodoslosClientes(){
-    this.service.obtenerClientes().subscribe((clientes)=>{
+   this.service.obtenerClientes().subscribe((clientes)=>{
       //console.log(clientes)
-      this.arrayClientes=clientes
+      this.arrayClientes=clientes;
       console.log(this.arrayClientes)
-    })
+    });
+   
   }
   
   obtenerClientePorDni(dni:any){
@@ -33,8 +30,17 @@ export class AdminPrincipalComponent implements OnInit {
     this.service.obtenerClientePorDni(dni).subscribe(clienteDni =>{
       console.log(clienteDni)
       this.clientePorDni = clienteDni;
+
     })
     
-  
+    /*this.arrayClientesDni=this.arrayClientes.filter((clienteDni)=>{
+      if(clienteDni.dni==dni){
+        //console.log(clienteDni);
+        this.clientePorDni=clienteDni;
+        console.log("array"+this.clientePorDni.dni)
+      }
+    })*/
+
+    
 }
 }

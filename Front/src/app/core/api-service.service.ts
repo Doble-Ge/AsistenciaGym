@@ -16,4 +16,8 @@ export class ApiServiceService {
    obtenerClientePorDni(dniCliente:number):Observable<Cliente>{
     return this.http.get<Cliente>(this.url+'api/cliente/'+dniCliente);
    }
+   añadirCliente(cliente:Cliente){
+     console.log(cliente);
+     return this.http.post(this.url+'api/cliente/', cliente)
+   }
 }
