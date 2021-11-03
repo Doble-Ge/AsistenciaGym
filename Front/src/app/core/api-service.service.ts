@@ -20,4 +20,9 @@ export class ApiServiceService {
      console.log(cliente);
      return this.http.post(this.url+'api/cliente/', cliente)
    }
+
+  eliminarCliente(dni:number){
+    console.log(dni)
+    //return this.http.delete(this.url+'api/cliente/'+dni);
+  }
 }

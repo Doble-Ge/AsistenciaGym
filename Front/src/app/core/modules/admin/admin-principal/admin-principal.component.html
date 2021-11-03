@@ -53,6 +53,7 @@
                 <th scope="col ">Dni</th>
                 <th scope="col ">Email</th>
                 <th scope="col ">Telefono</th>
+                <th scope="col">Op</th>
             </tr>
         </thead>
         <tbody>
@@ -62,6 +63,8 @@
                 <td>{{clientePorDni?.email}}</td>
                 <td>{{clientePorDni?.dni}}</td>
                 <td>{{clientePorDni?.telefono}}</td>
+                <td><button class="btn btn-primary">Actualizar</button>
+                    <button class="btn btn-danger">Eliminar</button></td>
             </tr>
         </tbody>
     </table>
@@ -77,6 +80,7 @@
                     <th scope="col ">Dni</th>
                     <th scope="col ">Email</th>
                     <th scope="col ">Telefono</th>
+                    <th scope="col">Op</th>
                 </tr>
             </thead>
             <tbody>
@@ -86,6 +90,8 @@
                     <td>{{cliente.dni}}</td>
                     <td>{{cliente.email}}</td>
                     <td>{{cliente.telefono}}</td>
+                    <td><button class="btn btn-primary">Actualizar</button>
+                        <button class="btn btn-danger">Eliminar</button></td>
                 </tr>
             </tbody>
         </table>
