@@ -20,15 +20,15 @@ export class AdminPrincipalComponent implements OnInit {
    this.service.obtenerClientes().subscribe((clientes)=>{
       //console.log(clientes)
       this.arrayClientes=clientes;
-      console.log(this.arrayClientes)
+      //console.log(this.arrayClientes)
     });
    
   }
   
   obtenerClientePorDni(dni:any){
-    console.log(dni)
+    //console.log(dni)
     this.service.obtenerClientePorDni(dni).subscribe(clienteDni =>{
-      console.log(clienteDni)
+      //console.log(clienteDni)
       this.clientePorDni = clienteDni;
 
     })
@@ -42,5 +42,14 @@ export class AdminPrincipalComponent implements OnInit {
     })*/
 
     
+}
+
+eliminarUnCliente(dni:any){
+  //console.log(dni)
+  let dniEliminar:number;
+  dniEliminar=dni;
+  this.service.eliminarCliente(dniEliminar).subscribe(dnieliminado =>{
+    console.log(dnieliminado)
+  });
 }
 }

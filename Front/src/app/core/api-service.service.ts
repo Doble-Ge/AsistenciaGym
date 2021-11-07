@@ -18,11 +18,13 @@ export class ApiServiceService {
    }
    añadirCliente(cliente:Cliente){
      console.log(cliente);
-     return this.http.post(this.url+'api/cliente/', cliente)
+     return this.http.post(this.url+'api/cliente/', cliente);
    }
 
   eliminarCliente(dni:number){
-    console.log(dni)
+    console.log("dni a eliminar"+ " "+dni)
+    return this.http.delete(this.url+'api/cliente/'+ dni);
+    //console.log(dni)
     //return this.http.delete(this.url+'api/cliente/'+dni);
   }
 }
