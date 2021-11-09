@@ -1,45 +1,4 @@
-<header class="header">
-    <div class="menu">
-        <div style="margin-left: 15px;">
-            <h1 style="color: white;">GymPowerLr</h1>
-        </div>
-
-        <nav class="redes-sociales">
-            <a href="#"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
-            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-        </nav>
-
-        <nav class="navegacion">
-            <ul>
-                <a href="" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']">Clientes</a>
-                <a href=" " [routerLink]="[ '/'] ">Salir</a>
-            </ul>
-        </nav>
-    </div>
-
-</header>
-<div>
-    <h3 style="text-align: center;margin-top: 15px;">Estadisticas</h3>
-    <div class="estadisticasClientes">
-        <div>
-            <h5>Clientes que ingresaron el ultimo mes</h5>
-            <p>Realizar consulta sql</p>
-            <a href="">Click aqui</a>
-        </div>
-        <div>
-            <h5>Clientes que ingresaron el ultimo año</h5>
-            <p>Realizar consulta sql</p>
-            <a href="">Click aqui</a>
-        </div>
-        <div>
-            <h5>Clientes que deben la ultima cuota</h5>
-            <p>Realizar consulta sql</p>
-            <a href="">Click aqui</a>
-        </div>
-    </div>
-</div>
-
+<app-header-admin></app-header-admin>
 
 <div class="tablaClientes ">
     <h3 style="text-align: center;margin-top: 15px; ">Planilla de clientes</h3>
@@ -71,7 +30,7 @@
     </div>
     <div class="button">
         <button class="btn btn-success" (click)="crearCliente(nombre.value,apellido.value,dni.value,email.value,telefono.value)">Agregar</button>
+        <button class="btn btn-danger" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']">Regresar</button>
     </div>
-
 
 </div>

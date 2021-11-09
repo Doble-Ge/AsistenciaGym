@@ -1,0 +1,38 @@
+.divTable {
+    margin-top: 20px;
+}
+
+.divTable>h2 {
+    text-align: center;
+}
+
+.button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.button>button {
+    margin: 10px
+}
+
+.operacionesClientes {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 5px solid black;
+    padding: 15px;
+}
+
+.operacionesClientes>div>input {
+    margin-right: 5px;
+}
+
+.divBuscador {
+    margin-top: 20px;
+}
+
+.divBuscador>h2 {
+    text-align: center;
+}

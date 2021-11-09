@@ -1,32 +1,3 @@
-.header {
-    width: 100%;
-}
-
-.menu {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    opacity: 0.8;
-}
-
-.navegacion {
-    border-bottom: 5px solid black;
-}
-
-nav>ul {
-    display: flex;
-    justify-content: end;
-}
-
-nav>ul>a {
-    margin: 5px;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    border-radius: 10px;
-}
-
 .container {
     margin-top: 30px;
 }
@@ -59,16 +30,3 @@ nav>ul>a {
 .operacionesClientes>div>input {
     margin-right: 5px;
 }
-
-/** Iconos Redes Sociales **/
-nav.redes-sociales {
-    text-align: center;
-  }
-  nav.redes-sociales a {
-    color: #ffffff;
-    font-size: 2em;
-    margin-right: 20px;
-  }
-  nav.redes-sociales a:last-child{
-    margin-right: 0;
-  }

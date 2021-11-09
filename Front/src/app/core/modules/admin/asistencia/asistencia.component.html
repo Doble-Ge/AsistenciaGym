@@ -1,0 +1,67 @@
+<app-header-admin></app-header-admin>
+<div class="operacionesClientes">
+    <div>
+        <input type="text" placeholder="Buscar por apellido">
+        <button class="btn btn-success">Buscar</button>
+    </div>
+    <div>
+        <input type="text" placeholder="Buscar por dni">
+        <button class="btn btn-success">Buscar</button>
+    </div>
+    <div>
+        <input type="text" placeholder="Buscar por fecha">
+        <button class="btn btn-success">Buscar</button>
+    </div>
+</div>
+
+<div class="container divBuscador">
+    <h2>Buscador</h2>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Horario</th>
+                <th scope="col">Cliente</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>fecha</td>
+                <td>horario</td>
+                <td>id_cliente</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container divTable">
+    <h2>Planilla de Asistencias</h2>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Horario</th>
+                <th scope="col">Cliente</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let asistencia of arrayAsistencias">
+                <td>{{asistencia.id}}</td>
+                <td>{{asistencia.fecha}}</td>
+                <td>{{asistencia.horario}}</td>
+                <td>{{asistencia.id_cliente}}</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+
+
+</div>
+
+<div class="button">
+    <button class="btn btn-success">Agregar</button>
+    <button class="btn btn-danger" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']">Regresar</button>
+</div>

@@ -5,13 +5,17 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { LoginComponent } from './login/login.component';
 import { AdminPrincipalComponent } from './admin-principal/admin-principal.component';
 import {HttpClientModule} from '@angular/common/http';
-import { CrearClienteComponent } from './crear-cliente/crear-cliente.component'
+import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
+import { AsistenciaComponent } from './asistencia/asistencia.component';
+import { HeaderAdminComponent } from './header-admin/header-admin.component'
 
 @NgModule({
   declarations: [
     LoginComponent,
     AdminPrincipalComponent,
-    CrearClienteComponent
+    CrearClienteComponent,
+    AsistenciaComponent,
+    HeaderAdminComponent
   ],
   imports: [
     CommonModule,

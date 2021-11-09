@@ -40,8 +40,7 @@ export class AdminPrincipalComponent implements OnInit {
         console.log("array"+this.clientePorDni.dni)
       }
     })*/
-
-    
+  
 }
 
 eliminarUnCliente(dni:any){
@@ -49,7 +48,11 @@ eliminarUnCliente(dni:any){
   let dniEliminar:number;
   dniEliminar=dni;
   this.service.eliminarCliente(dniEliminar).subscribe(dnieliminado =>{
-    console.log(dnieliminado)
+    //console.log(dnieliminado)
   });
+}
+
+buscarAsistenciaPorCliente(dni:any){
+  console.log(dni)
 }
 }
