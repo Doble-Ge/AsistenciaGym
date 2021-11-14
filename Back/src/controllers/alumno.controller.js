@@ -1,8 +1,8 @@
 import { text } from 'express';
 import Alumno from '../models/alumno.model';
 
-export async function getAlumno(req,res) {
-    try{
+export async function getAlumno(req, res) {
+    try {
         const alumno = await Alumno.findAll();
         res.json({
             alumno
@@ -10,7 +10,7 @@ export async function getAlumno(req,res) {
     } catch (e) {
         console.log(e);
     }
-   
+
 }
 
 /*export async function crearUsuario(req, res) {

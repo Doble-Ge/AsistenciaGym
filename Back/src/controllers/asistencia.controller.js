@@ -1,6 +1,7 @@
 import { text } from 'express';
 import Asistencia
- from '../models/asistencia.model';
+from '../models/asistencia.model';
+import Turno from '../models/turno.model';
 export async function getAsistencia(req, res) {
     try {
         const asistencia = await Asistencia.findAll();

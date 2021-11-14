@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { crearAsistencia, deleteAsistencia, getAsistencia, getOneAsistencia, updateAsistencia } from '../controllers/asistencia.controller';
+import { crearAsistencia, deleteAsistencia, getAsistencia, getAsistenciaTurno, getOneAsistencia, obtenerAsistenciaTurno, updateAsistencia } from '../controllers/asistencia.controller';
 const router = Router();
 
 
@@ -12,4 +12,4 @@ router.get('/', getOneAsistencia);
 router.delete('/', deleteAsistencia);
 router.put('/', updateAsistencia);
 
-export default router; 
+export default router;

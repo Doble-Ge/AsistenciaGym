@@ -11,6 +11,7 @@ import asistenciaRoutes from './routes/asistencia.route'
 
 const app = express();
 const cors = require('cors');
+
 //MIDDLEWARES
 app.use(morgan('dev'));
 app.use(json());

@@ -1,9 +1,7 @@
 import Sequelize from 'sequelize';
 import { sequelize } from '../database/conexion';
-
 import Comprobante from './comprobante.model';
-import Turno from './turno.model';
-
+const { Turno } = require('../models/turno.model')
 const Cliente = sequelize.define('cliente', {
     id: {
         type: Sequelize.INTEGER,
@@ -28,7 +26,6 @@ const Cliente = sequelize.define('cliente', {
     timestamps: false
 });
 
-/*Cliente.hasMany(Comprobante, { foreignKey: 'id_cliente', sourceKey: 'id'});
-Cliente.belongsTo(Turno, { foreignKey: 'id_cliente', soruceKey: 'id'});*/
+//Cliente.belongsTo(Turno, { foreignKey: 'id_cliente', soruceKey: 'id' });
 
 export default Cliente;
