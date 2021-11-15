@@ -22,6 +22,7 @@ const Turno = sequelize.define('turno', {
 });
 
 Turno.hasMany(Asistencia, { foreignKey: 'id_turno', sourceKey: 'id' });
-//Turno.hasMany(Cuota, { foreignKey: 'id_turno', sourceKey: 'id'});
+Turno.hasMany(Cliente, { foreignKey: 'id_turno', sourceKey: 'id' })
+    //Turno.hasMany(Cuota, { foreignKey: 'id_turno', sourceKey: 'id'});
 
 export default Turno;

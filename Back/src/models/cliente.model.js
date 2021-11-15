@@ -27,5 +27,5 @@ const Cliente = sequelize.define('cliente', {
 });
 
 //Cliente.belongsTo(Turno, { foreignKey: 'id_cliente', soruceKey: 'id' });
-
+//Cliente.hasOne(Turno, { foreignKey: 'id_cliente', soruceKey: 'id' });
 export default Cliente;

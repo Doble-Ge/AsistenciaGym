@@ -19,7 +19,6 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">id</th>
                 <th scope="col">Fecha</th>
                 <th scope="col">Horario</th>
                 <th scope="col">Cliente</th>
@@ -27,7 +26,6 @@
         </thead>
         <tbody>
             <tr>
-                <td>id</td>
                 <td>fecha</td>
                 <td>horario</td>
                 <td>id_cliente</td>
@@ -40,7 +38,7 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">id</th>
+
                 <th scope="col">Fecha</th>
                 <th scope="col">Horario</th>
                 <th scope="col">Cliente</th>
@@ -48,7 +46,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let asistencia of arrayAsistencias">
-                <td>{{asistencia.id}}</td>
+
                 <td>{{asistencia.fecha}}</td>
                 <td>{{asistencia.horario}}</td>
                 <td>{{asistencia.id_cliente}}</td>

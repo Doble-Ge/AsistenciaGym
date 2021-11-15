@@ -4,11 +4,13 @@ import { AdminPrincipalComponent } from './admin-principal/admin-principal.compo
 import { AsistenciaComponent } from './asistencia/asistencia.component';
 import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
 import { LoginComponent } from './login/login.component';
+import { TurnosComponent } from './turnos/turnos.component';
 
 const routes: Routes = [{path:'admin',component:LoginComponent}
 ,{path:'hcBWvERHhVtxfqdLn8j3LdejrxFVTU',component:AdminPrincipalComponent},
 {path:'hcBWvERHhVtxfqdLn8j3LdejrxFVTU/crearcliente',component:CrearClienteComponent},
-{path:'asistencias',component:AsistenciaComponent}
+{path:'asistencias',component:AsistenciaComponent},
+{path:'hcBWvERHhVtxfqdLn8j3LdejrxFVTU/turnos',component:TurnosComponent}
 ];
 
 @NgModule({

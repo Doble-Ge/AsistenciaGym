@@ -7,7 +7,9 @@ import { AdminPrincipalComponent } from './admin-principal/admin-principal.compo
 import {HttpClientModule} from '@angular/common/http';
 import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
 import { AsistenciaComponent } from './asistencia/asistencia.component';
-import { HeaderAdminComponent } from './header-admin/header-admin.component'
+import { HeaderAdminComponent } from './header-admin/header-admin.component';
+import { TurnosComponent } from './turnos/turnos.component';
+import { FooterHeaderComponent } from './footer-header/footer-header.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { HeaderAdminComponent } from './header-admin/header-admin.component'
     AdminPrincipalComponent,
     CrearClienteComponent,
     AsistenciaComponent,
-    HeaderAdminComponent
+    HeaderAdminComponent,
+    TurnosComponent,
+    FooterHeaderComponent
   ],
   imports: [
     CommonModule,

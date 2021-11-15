@@ -1,0 +1,15 @@
+.divTabla {
+    margin-top: 20px;
+}
+
+.button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inputBuscador {
+    margin-right: 5px;
+}

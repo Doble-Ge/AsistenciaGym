@@ -4,10 +4,19 @@ import { text } from 'express';
 import Turno from '../models/turno.model';
 import Asitencia from '../models/asistencia.model'
 import Asistencia from '../models/asistencia.model';
+import Cliente from '../models/cliente.model';
 export async function getTurnoAsistenciaHolis(req, res) {
     try {
         const turno = await Turno.findAll({
-            include: [{ model: Asistencia, attributes: ['fecha', 'id_cliente'] }]
+            include: [{
+                    model: Asistencia,
+                    attributes: ['fecha', 'id_cliente']
+                },
+                {
+                    model: Cliente,
+                    attributes: ['nombre', 'apellido']
+                }
+            ]
         }).then((turnos) => {
             res.json(turnos)
             console.log(turnos)
@@ -62,11 +71,13 @@ export async function getOneTurno(req, res) {
         const turno = await Turno.findOne({
             where: {
                 id: id
-            }
+            },
+            include: [{
+                model: Cliente,
+                attributes: ['nombre', 'apellido']
+            }]
         });
-        res.json({
-            data: turno
-        });
+        res.json(turno);
     } catch (e) {
         console.log(e);
     }

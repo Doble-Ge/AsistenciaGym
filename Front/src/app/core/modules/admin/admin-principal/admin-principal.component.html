@@ -26,7 +26,7 @@
         <button class="btn btn-primary" [routerLink]="['/asistencias']">Asistencias</button>
     </div>
     <div> <button class="btn btn-success" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU/crearcliente'] ">Agregar nuevo cliente</button></div>
-
+    <div><button class="btn btn-warning" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU/turnos']">Turnos</button></div>
 </div>
 <div class="container">
     <table class="table table-dark ">
@@ -48,7 +48,7 @@
                 <td>{{clientePorDni?.dni}}</td>
                 <td>{{clientePorDni?.telefono}}</td>
                 <td><button class="btn btn-primary">Actualizar</button>
-                    <button class="btn btn-danger">Eliminar</button></td>
+                    <button class="btn btn-danger" (click)="eliminarUnCliente(clientePorDni.dni)">Eliminar</button></td>
             </tr>
         </tbody>
     </table>
