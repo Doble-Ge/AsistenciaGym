@@ -24,6 +24,8 @@
     margin: 10px;
     width: 40%;
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .contenedorMeses {
@@ -45,5 +47,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3px;
+}
+
+.divDias {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
     padding: 3px;
 }
