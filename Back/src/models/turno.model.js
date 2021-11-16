@@ -17,11 +17,23 @@ const Turno = sequelize.define('turno', {
     id_cliente: {
         type: Sequelize.INTEGER
     },
+    fecha: {
+        type: Sequelize.DATE
+    },
+    mes: {
+        type: Sequelize.INTEGER
+    },
+    mesDescripcion: {
+        type: Sequelize.TEXT
+    },
+    dia: {
+        type: Sequelize.INTEGER
+    }
 }, {
     timestamps: false
 });
 
-Turno.hasMany(Asistencia, { foreignKey: 'id_turno', sourceKey: 'id' });
+//Turno.hasMany(Asistencia, { foreignKey: 'id_turno', sourceKey: 'id' });
 Turno.hasMany(Cliente, { foreignKey: 'id_turno', sourceKey: 'id' })
     //Turno.hasMany(Cuota, { foreignKey: 'id_turno', sourceKey: 'id'});
 

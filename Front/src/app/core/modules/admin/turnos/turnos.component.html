@@ -1,39 +1,43 @@
 <app-header-admin></app-header-admin>
 <div class="container divTabla">
 
-    <table class="table table-dark">
-        <thead class="">
-            <tr>
-                <th scope="col">Turno</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Horario</th>
-                <th scope="col">Cantidad de personas</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Funcion</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let turnos of arrayTurnos,index as i">
-                <td>{{turnos?.id}}</td>
-                <td>{{turnos?.descripcion}}</td>
-                <td>{{turnos?.horario}}</td>
-                <!--<td>{{turnos.asistencia[0]?.fecha}}</td>
-                <td>{{turnos.clientes[0]?.nombre}}</td>
-                <td>{{turnos.clientes[0]?.apellido}}</td>-->
-                <td>8</td>
-                <td>{{turnos?.fecha_Turno}}</td>
-                <td><button class="btn btn-primary" (click)="revisarTurnos(turnos.id)">Ver Inscriptos</button></td>
-            </tr>
 
-        </tbody>
-    </table>
-    <div class="button">
-        <div>
-            <button class="btn btn-danger" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']">Regresar</button>
-        </div>
-    </div>
 
     <div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Mes</th>
+                    <th scope="col">Fn</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let meses of arrayTurnosMeses">
+
+                    <td>{{meses}}</td>
+                    <td><button class="btn btn-primary" (click)="obtenerTurnosMes(meses)">Ver turnos</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <table class="table table-dark">
+            <thead class="">
+                <tr>
+                    <th scope="col">Dia</th>
+                    <th scope="col">Turno</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let turnoMarzo of turnosFebrero">
+                    <td>{{turnoMarzo.mes}}</td>
+                    <td>{{turnoMarzo.mesDescripcion}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
         <table class="table table-dark">
             <thead class="">
                 <tr>
@@ -41,13 +45,49 @@
                     <th scope="col">Descripcion</th>
                     <th scope="col">Horario</th>
                     <th scope="col">Cantidad de personas</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Funcion</th>
                 </tr>
             </thead>
             <tbody>
+                <tr *ngFor="let turnos of arrayTurnos,index as i">
+                    <td>{{turnos?.id}}</td>
+                    <td>{{turnos?.descripcion}}</td>
+                    <td>{{turnos?.horario}}</td>
+                    <td>{{turnos?.clientes?.length}}</td>
+                    <!--<td>{{turnos.asistencia[0]?.fecha}}</td>
+                    <td>{{turnos.clientes[0]?.nombre}}</td>
+                    <td>{{turnos.clientes[0]?.apellido}}</td>-->
+                    <td>{{turnos?.fecha}}</td>
+                    <td><button class="btn btn-primary" (click)="revisarTurnos(turnos.id)">Ver Inscriptos</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="button">
+            <div>
+                <button class="btn btn-danger" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']">Regresar</button>
+            </div>
+        </div>
+
+
+        <table class="table table-dark">
+            <thead class="">
                 <tr>
-                    <td>sdf</td>
-                    <td>{{turnoCliente.clientes[0].apellido}}</td>
-                    <td>{{turnoCliente.clientes[0].nombre}}</td>
+                    <th scope="col">Turno</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Horario</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let turnoClientes of turnoCliente?.clientes">
+                    <td>{{turnoCliente?.id}}</td>
+                    <td>{{turnoCliente?.descripcion}}</td>
+                    <td>{{turnoClientes?.apellido}}</td>
+                    <td>{{turnoClientes?.nombre}}</td>
+                    <td>{{turnoCliente?.horario}}</td>
                 </tr>
 
             </tbody>

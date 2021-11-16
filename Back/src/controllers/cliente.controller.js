@@ -12,7 +12,8 @@ export async function getCliente(req, res) {
 }
 
 export async function crearCliente(req, res) {
-    const { nombre, apellido, dni, email, telefono } = req.body;
+    const { nombre, apellido, dni, email, telefono, contrasena } = req.body;
+    console.log("contraseña:" + contrasena);
     try {
 
         let nuevoCliente = await Cliente.create({
@@ -20,9 +21,10 @@ export async function crearCliente(req, res) {
             apellido,
             dni,
             email,
-            telefono
+            telefono,
+            contrasena,
         }, {
-            fields: ['nombre', 'apellido', 'dni', 'email', 'telefono']
+            fields: ['nombre', 'apellido', 'dni', 'email', 'telefono', 'contrasena']
         });
         if (nuevoCliente) {
             return res.json({
@@ -94,7 +96,7 @@ export async function updateCliente(req, res) {
         const { nombre, apellido, dni, email, telefono } = req.body;
 
         const cliente = await Cliente.findAll({
-            attributes: ['id', 'nombre', 'apellido', 'dni', 'email', 'telefono'],
+            attributes: ['id', 'nombre', 'apellido', 'dni', 'email', 'telefono', 'contrasena'],
             where: {
                 id: id
             }

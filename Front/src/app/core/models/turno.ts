@@ -3,7 +3,10 @@ export class Turno{
     descripcion!: string;
     horario!: string;
     id_cliente!: number;
-    fecha_Turno!:Date;
+    fecha!:Date;
+    mes!:number;
+    dia!:number;
+    mesDescripcion!:string;
     asistencia!:[{
         fecha:Date,
         id_cliente:Number

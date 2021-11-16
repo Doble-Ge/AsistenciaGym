@@ -14,11 +14,12 @@
     </div>
     <div class="form-group">
 
-        <input type="text" class="form-control" placeholder="Password" #apellido>
+        <input type="text" class="form-control" placeholder="Apellido" #apellido>
     </div>
+
     <div class="form-group">
 
-        <input type="number" class="form-control" placeholder="Dni" #dni>
+        <input type="string" class="form-control" placeholder="Dni" #dni>
     </div>
     <div class="form-group">
 
@@ -26,10 +27,14 @@
     </div>
     <div class="form-group">
 
-        <input type="" class="form-control" placeholder="Telefono" #telefono>
+        <input type="text" class="form-control" placeholder="Telefono" #telefono>
+    </div>
+    <div class="form-group">
+
+        <input type="text" class="form-control" placeholder="Password" #contrasena>
     </div>
     <div class="button">
-        <button class="btn btn-success" (click)="crearCliente(nombre.value,apellido.value,dni.value,email.value,telefono.value)">Agregar</button>
+        <button class="btn btn-success" (click)="crearCliente(nombre.value,apellido.value,dni.value,email.value,telefono.value,contrasena.value)">Agregar</button>
         <button class="btn btn-danger" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']">Regresar</button>
     </div>
 

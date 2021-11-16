@@ -17,13 +17,15 @@ export class CrearClienteComponent implements OnInit {
   añadirCliente(nombre:string,apellido:string,dni:string,email:string,telefono:string){
     console.log(nombre);
   }
-  crearCliente(nombre:string,apellido:string,dni:string,email:string,telefono:string){
-    console.log(nombre,apellido,dni,email,telefono);
+  crearCliente(nombre:string,apellido:string,dni:string,email:string,telefono:string,contrasena:string){
+    console.log(nombre,apellido,dni,email,telefono,contrasena);
+    
     const nDni= Number(dni);
     this.nuevoCliente= new Cliente;
     const nTelefono= Number(telefono);
     this.nuevoCliente.nombre=nombre;
     this.nuevoCliente.apellido=apellido;
+    this.nuevoCliente.contrasena=contrasena;
     this.nuevoCliente.dni=nDni;
     this.nuevoCliente.email=email;
     this.nuevoCliente.telefono=telefono;
@@ -32,5 +34,6 @@ export class CrearClienteComponent implements OnInit {
     }));
 
     //this.routes.navigate(['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']);
+    
   }
 }

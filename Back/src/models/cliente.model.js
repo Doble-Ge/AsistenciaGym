@@ -22,6 +22,9 @@ const Cliente = sequelize.define('cliente', {
     telefono: {
         type: Sequelize.INTEGER
     },
+    contrasena: {
+        type: Sequelize.TEXT
+    }
 }, {
     timestamps: false
 });

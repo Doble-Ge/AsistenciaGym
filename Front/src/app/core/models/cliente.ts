@@ -5,4 +5,5 @@ export class Cliente{
     dni!: number;
     email!: string;
     telefono!: string;
+    contrasena!:string;
 }

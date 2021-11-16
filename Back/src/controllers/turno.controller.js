@@ -9,14 +9,9 @@ export async function getTurnoAsistenciaHolis(req, res) {
     try {
         const turno = await Turno.findAll({
             include: [{
-                    model: Asistencia,
-                    attributes: ['fecha', 'id_cliente']
-                },
-                {
-                    model: Cliente,
-                    attributes: ['nombre', 'apellido']
-                }
-            ]
+                model: Cliente,
+                attributes: ['nombre', 'apellido']
+            }]
         }).then((turnos) => {
             res.json(turnos)
             console.log(turnos)
