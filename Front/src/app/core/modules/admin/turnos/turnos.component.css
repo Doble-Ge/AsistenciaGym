@@ -13,3 +13,37 @@
 .inputBuscador {
     margin-right: 5px;
 }
+
+.contenedorMesDia {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorDias {
+    border: 3px solid black;
+    margin: 10px;
+    width: 40%;
+    padding: 10px;
+}
+
+.contenedorMeses {
+    padding: 10px;
+    border: 3px solid black;
+    margin: 10px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.divMeses {
+    min-width: 50px;
+    width: 100px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+}
