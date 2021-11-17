@@ -37,7 +37,7 @@ export class ApiServiceService {
     return this.http.get<Asistencia[]>(this.url+'api/asistencia');
   }
 
-  // --------------------- FUNCIONES TURNOS ---------------------
+  // --------------------- SERVICIO TURNOS ---------------------
 
   obtenerTodosLosTurnos():Observable<Turno[]>{
     return this.http.get<Turno[]>(this.url+'api/turno/turnoasistencia');
@@ -45,4 +45,5 @@ export class ApiServiceService {
   obtenerUnTurnoPorId(id_turno:number):Observable<Turno>{
     return this.http.get<Turno>(this.url+'api/turno/'+id_turno);
   }
+
 }

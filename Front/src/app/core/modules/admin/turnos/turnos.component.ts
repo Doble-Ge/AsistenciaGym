@@ -17,6 +17,7 @@ export class TurnosComponent implements OnInit {
   turnosFebrero!:Turno[];
   arrayDiasMes!:number[];
   mesAuxiliar!:number;
+  mostrarForm:boolean=false;
   arrayTurnosDiaMes!:Turno[];
   arrayClientesDiaMesTurno!:Turno[];
   arrayTurnosMeses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
@@ -48,7 +49,7 @@ export class TurnosComponent implements OnInit {
       
       this.turnoCliente=turno;
       
-      //console.log(this.turnoCliente)
+      console.log(this.turnoCliente)
       
     })
      
@@ -151,6 +152,32 @@ export class TurnosComponent implements OnInit {
     console.log(this.arrayTurnosDiaMes)
   }
 
+  editarTurnoCliente(idTurno:number,descripcionTurno:string,horario:string,idCliente:number,nombreCliente:string,apellidoCliente:string){
+//el horario tiene que ir como string al back
+    this.mostrarForm=true;
+    console.log("idturno:"+idTurno)
+    console.log("turno:"+descripcionTurno)
+    console.log("horario:"+horario)
+    console.log("cliente:"+idCliente)
+    console.log("nombre:"+nombreCliente)
+    console.log("apellido:"+apellidoCliente)
+
+    let camposForm={
+      turno: idTurno,
+      descripcion : descripcionTurno,
+      horarioTurno : horario,
+      cliente:idCliente,
+      nombre:nombreCliente,
+      apellido:apellidoCliente
+
+    }
+
+    let inputNombre= document.getElementById("turno");
+    
+  }
+
+
+  
   }
 
 

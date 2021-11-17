@@ -14,13 +14,16 @@
             <p>
                 <td>Dia {{dias}}</td>
             </p>
+            <div>
+                <button class="btn btn-success" (click)="filtrarTurnosMeses(mesAuxiliar,dias)">ver</button>
 
-            <button class="btn btn-success" (click)="filtrarTurnosMeses(mesAuxiliar,dias)"> ver</button>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="container divTabla">
+    <h2 style="text-align: center;">Turnos</h2>
     <table class="table table-dark">
         <thead class="">
             <tr>
@@ -41,7 +44,19 @@
                 <td>{{turnoDiaMes.horario}}</td>
                 <td>{{turnoDiaMes.descripcion}}</td>
                 <td>{{turnoDiaMes.clientes?.length}}</td>
-                <td><button class="btn btn-primary" (click)="revisarTurnos(turnoDiaMes.id)">Ver inscriptos</button></td>
+
+                <td *ngIf="turnoDiaMes.clientes.length<6">
+                    <button class="btn btn-success" (click)="revisarTurnos(turnoDiaMes.id)">Ver inscriptos</button>
+                    <button class="btn btn-info">Modificar</button>
+                </td>
+                <td *ngIf="turnoDiaMes.clientes.length>=6 && turnoDiaMes.clientes.length<8">
+                    <button class="btn btn-warning" (click)="revisarTurnos(turnoDiaMes.id)">Ver inscriptos</button>
+                    <button class="btn btn-info">Modificar</button>
+                </td>
+                <td *ngIf="turnoDiaMes.clientes.length>=8">
+                    <button class="btn btn-danger" (click)="revisarTurnos(turnoDiaMes.id)">Ver inscriptos</button>
+                    <button class="btn btn-info">Modificar</button>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -63,21 +78,40 @@
                     <th scope="col">Horario</th>
                     <th scope="col">Apellido</th>
                     <th scope="col">Nombre</th>
+                    <th scope="col">Operacion</th>
                 </tr>
             </thead>
             <tbody>
+
                 <tr *ngFor="let turnoClientes of turnoCliente?.clientes">
                     <td>{{turnoCliente?.id}}</td>
                     <td>{{turnoCliente?.descripcion}}</td>
+                    <td>{{turnoCliente?.horario}}</td>
                     <td>{{turnoClientes?.apellido}}</td>
                     <td>{{turnoClientes?.nombre}}</td>
-                    <td>{{turnoCliente?.horario}}</td>
+                    <td><button class="btn btn-primary" (click)="editarTurnoCliente(turnoCliente.id,turnoCliente.descripcion,turnoCliente.horario,turnoCliente.id_cliente,turnoClientes.apellido,turnoClientes.nombre)">Editar</button></td>
                 </tr>
 
             </tbody>
         </table>
 
+        <div *ngIf="mostrarForm==false">
 
+        </div>
+        <div *ngIf="mostrarForm==true">
+            <div>
+                <input type="text" placeholder="Apellido" id="Apellido">
+                <input type="text" placeholder="Turno" id="turno">
+                <input type="text" placeholder="Nombre" id="nombre">
+                <input type="text" placeholder="Horario" id="horario">
+                <div>
+                    <button class="btn btn-success">Modificar</button>
+                    <button class="btn btn-danger">Cancelar</button>
+                </div>
+
+
+            </div>
+        </div>
         <div class="button">
             <div>
                 <button class="btn btn-danger" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']">Regresar</button>
