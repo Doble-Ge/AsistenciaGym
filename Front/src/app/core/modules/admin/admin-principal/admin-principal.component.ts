@@ -50,6 +50,8 @@ eliminarUnCliente(dni:any){
   this.service.eliminarCliente(dniEliminar).subscribe(dnieliminado =>{
     //console.log(dnieliminado)
   });
+
+  this.routes.navigate(['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']);
 }
 
 buscarAsistenciaPorCliente(dni:any){

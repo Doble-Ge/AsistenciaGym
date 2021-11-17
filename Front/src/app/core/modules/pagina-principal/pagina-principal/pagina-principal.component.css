@@ -31,6 +31,8 @@ nav>ul>a {
     background-color: black;
     border-radius: 10px;
 }
+
+
 /*
 .servicios {
     display: flex;
@@ -45,7 +47,8 @@ nav>ul>a {
     background-color: crimson;
 }
 */
-.cartas{
+
+.cartas {
     display: flex;
     justify-content: space-around;
 }
@@ -101,50 +104,59 @@ nav.redes-sociales a:last-child {
     padding-left: 10px;
 }
 
-.infoclases{
-    color:   white;
+.infoclases {
+    margin: 10px;
+    color: white;
     text-align: start;
     font-size: 15px;
     padding: 30px;
     border: 1px solid black;
     border-radius: 15px;
-    width: 100%;
+    width: 98%;
     height: 200px;
-    background-color: black;
+    background-color: rgb(121, 112, 112);
 }
-.infoprofesora{
-    color:   white;
+
+.infoprofesora {
+    margin: 10px;
+    color: white;
     text-align: start;
     font-size: 15px;
     padding: 30px;
     border: 1px solid black;
     border-radius: 15px;
-    width: 100%;
+    width: 98%;
     height: 200px;
-    background-color: black;
+    background-color: rgb(212, 68, 68);
 }
-.infomembresias{
-    color:   white;
+
+.infomembresias {
+    margin: 10px;
+    color: white;
     text-align: start;
     font-size: 15px;
     padding: 30px;
     border: 1px solid black;
     border-radius: 15px;
-    width: 100%;
+    width: 98%;
     height: 200px;
-    background-color: black;
+    background-color: rgb(121, 112, 112);
 }
-.infonosotros{
-    color:   white;
+
+.infonosotros {
+    margin: 10px;
+    color: white;
     text-align: start;
     font-size: 15px;
     padding: 30px;
     border: 1px solid black;
     border-radius: 15px;
-    width: 100%;
+    width: 98%;
     height: 200px;
-    background-color: black;
+    background-color: rgb(212, 68, 68);
 }
+
+
 /*
 .imagenclases{
     display: flex;
