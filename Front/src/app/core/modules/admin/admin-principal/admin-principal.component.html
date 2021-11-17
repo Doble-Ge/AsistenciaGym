@@ -19,6 +19,38 @@
         </div>
     </div>
 </div>
+
+<div class="tablaClientes">
+    <h3 style="text-align: center;margin-top: 15px; ">Planilla de clientes</h3>
+    <div class="container ">
+        <table class="table table-dark ">
+            <thead>
+                <tr>
+                    <th scope="col ">Nombre</th>
+                    <th scope="col ">Apellido</th>
+                    <th scope="col ">Dni</th>
+                    <th scope="col ">Email</th>
+                    <th scope="col ">Telefono</th>
+                    <th scope="col">Operaciones</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of arrayClientes">
+                    <td>{{cliente.nombre}}</td>
+                    <td>{{cliente.apellido}}</td>
+                    <td>{{cliente.dni}}</td>
+                    <td>{{cliente.email}}</td>
+                    <td>{{cliente.telefono}}</td>
+                    <td><button class="btn btn-primary" (click)="editarCliente(cliente.id,cliente.nombre,cliente.apellido,cliente.dni,cliente.email,cliente.telefono)">Actualizar</button>
+                        <a href="http://localhost:4200/hcBWvERHhVtxfqdLn8j3LdejrxFVTU" class="btn btn-danger" (click)="eliminarUnCliente(cliente.dni)">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
 <div class="operacionesClientes">
     <div> <input type="text" placeholder="Buscar cliente por Dni" #inputDni>
         <button class="btn btn-warning" (click)="obtenerClientePorDni(inputDni.value)">Buscar Cliente</button></div>
@@ -48,38 +80,10 @@
                 <td>{{clientePorDni?.dni}}</td>
                 <td>{{clientePorDni?.telefono}}</td>
                 <td><button class="btn btn-primary">Actualizar</button>
-                    <button class="btn btn-danger" (click)="eliminarUnCliente(clientePorDni.dni)">Eliminar</button></td>
+                    <a href="http://localhost:4200/hcBWvERHhVtxfqdLn8j3LdejrxFVTU" class="btn btn-danger" (click)="eliminarUnCliente(clientePorDni.dni)">Eliminar</a>
+
+                </td>
             </tr>
         </tbody>
     </table>
-</div>
-<div class="tablaClientes">
-    <h3 style="text-align: center;margin-top: 15px; ">Planilla de clientes</h3>
-    <div class="container ">
-        <table class="table table-dark ">
-            <thead>
-                <tr>
-                    <th scope="col ">Nombre</th>
-                    <th scope="col ">Apellido</th>
-                    <th scope="col ">Dni</th>
-                    <th scope="col ">Email</th>
-                    <th scope="col ">Telefono</th>
-                    <th scope="col">Operaciones</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let cliente of arrayClientes">
-                    <td>{{cliente.nombre}}</td>
-                    <td>{{cliente.apellido}}</td>
-                    <td>{{cliente.dni}}</td>
-                    <td>{{cliente.email}}</td>
-                    <td>{{cliente.telefono}}</td>
-                    <td><button class="btn btn-primary">Actualizar</button>
-                        <button class="btn btn-danger" (click)="eliminarUnCliente(cliente.dni)">Eliminar</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 </div>

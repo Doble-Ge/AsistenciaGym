@@ -51,10 +51,13 @@ eliminarUnCliente(dni:any){
     //console.log(dnieliminado)
   });
 
-  this.routes.navigate(['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']);
+ this.routes.navigate(['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']);
+ // this.routes.navigateByUrl('http://localhost:4200/hcBWvERHhVtxfqdLn8j3LdejrxFVTU')
 }
 
-buscarAsistenciaPorCliente(dni:any){
-  console.log(dni)
-}
+  editarCliente(id:number,nombre:string,apellido:string,dni:number,email:string,telefono:string){
+    //console.log(id)
+    this.service.comunicarComponentePrincipalEditarCliente(id,nombre,apellido,dni,email,telefono);
+    this.routes.navigate(['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU/editarcliente'])
+  }
 }

@@ -1,0 +1,89 @@
+.header {
+    width: 100%;
+}
+
+.menu {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.8;
+}
+
+.navegacion {
+    border-bottom: 5px solid black;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: end;
+}
+
+nav>ul>a {
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.estadisticasClientes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    background-color: aquamarine;
+}
+
+.estadisticasClientes>div {
+    background-color: white;
+    height: 200px;
+    width: 300px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 18px;
+}
+
+.operacionesClientes {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 5px solid black;
+    padding: 15px;
+}
+
+.operacionesClientes>div>input {
+    margin-right: 5px;
+}
+
+
+/** Iconos Redes Sociales **/
+
+nav.redes-sociales {
+    text-align: center;
+}
+
+nav.redes-sociales a {
+    color: #ffffff;
+    font-size: 2em;
+    margin-right: 20px;
+}
+
+nav.redes-sociales a:last-child {
+    margin-right: 0;
+}
+
+.button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.button>button {
+    width: 100%;
+}
