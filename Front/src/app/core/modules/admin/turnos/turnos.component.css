@@ -59,3 +59,17 @@
     margin: 3px;
     padding: 3px;
 }
+
+.clientesTurnos {
+    display: flex;
+    justify-content: space-around;
+    border: 3px solid green;
+}
+
+.contenedorFormClientes {
+    margin: 10px;
+}
+
+.listadoClientes {
+    margin: 3px;
+}

@@ -46,4 +46,8 @@ export class ApiServiceService {
     return this.http.get<Turno>(this.url+'api/turno/'+id_turno);
   }
 
+  actualizarTurnoCliente(){
+
+  }
+
 }
