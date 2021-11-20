@@ -94,6 +94,7 @@
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
                         <th scope="col">Cantidad de asistencias</th>
+                        <th scope="col">Verificar Cant:{{arrayAsistenciasApellido.length}} </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -102,9 +103,16 @@
                         <td>{{asistencias.turno}}</td>
                         <td>{{asistencias.nombre}}</td>
                         <td>{{asistencias.apellido}}</td>
-                        <td>{{arrayAsistenciasApellido.length}}</td>
+                        <td>
+                        </td>
                     </tr>
                 </tbody>
+                <div *ngIf="arrayAsistenciasApellido.length>=2">
+                    <h2 style="color: red;"> El cliente supero las asistencias</h2>
+                </div>
+                <div *ngIf="arrayAsistenciasApellido.length<2">
+                    <h2 style="color: green;"> El cliente aún tiene asistencias disponibles</h2>
+                </div>
             </table>
         </div>
 

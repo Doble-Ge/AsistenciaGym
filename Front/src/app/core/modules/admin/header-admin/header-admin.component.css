@@ -3,14 +3,14 @@
 }
 
 .menu {
-    background-color: black;
+    background-color: #082032;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     opacity: 0.8;
 }
 
 .navegacion {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #082032;
 }
 
 nav>ul {
@@ -23,7 +23,7 @@ nav>ul>a {
     padding: 10px;
     text-decoration: none;
     color: white;
-    background-color: black;
+    background-color: #082032;
     border-radius: 10px;
 }
 
