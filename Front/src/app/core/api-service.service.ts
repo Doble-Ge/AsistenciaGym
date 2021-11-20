@@ -10,6 +10,13 @@ import { Turno } from './models/turno';
 })
 export class ApiServiceService {
   private url = 'http://localhost:4000/';
+
+  auxIdCliente!:number;
+  auxNombreCliente!:string;
+  auxApellidoCliente!:string;
+  auxEmailCliente!:string;
+  auxTelefonoCliente!:string;
+  auxDniCliente!:number
   constructor(private http : HttpClient) {
    }
    //--------------------- FUNCIONES CLIENTE ---------------------
@@ -46,8 +53,14 @@ export class ApiServiceService {
     return this.http.get<Turno>(this.url+'api/turno/'+id_turno);
   }
 
-  actualizarTurnoCliente(){
-
+  comunicarComponentePrincipalEditarCliente(id:number,nombre:string,apellido:string,dni:number,email:string,telefono:string){
+    console.log(id,dni,email,nombre,apellido,telefono)
+    this.auxIdCliente=id;
+    this.auxNombreCliente=nombre
+    this.auxApellidoCliente=apellido
+    this.auxTelefonoCliente=telefono
+    this.auxEmailCliente=email
+    this.auxDniCliente=dni;
   }
 
 }

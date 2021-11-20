@@ -9,7 +9,8 @@ import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
 import { AsistenciaComponent } from './asistencia/asistencia.component';
 import { HeaderAdminComponent } from './header-admin/header-admin.component';
 import { TurnosComponent } from './turnos/turnos.component';
-import { FooterHeaderComponent } from './footer-header/footer-header.component'
+import { FooterHeaderComponent } from './footer-header/footer-header.component';
+import { EditarClienteComponent } from './editar-cliente/editar-cliente.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterHeaderComponent } from './footer-header/footer-header.component'
     AsistenciaComponent,
     HeaderAdminComponent,
     TurnosComponent,
-    FooterHeaderComponent
+    FooterHeaderComponent,
+    EditarClienteComponent
   ],
   imports: [
     CommonModule,

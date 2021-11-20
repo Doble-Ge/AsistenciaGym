@@ -3,4 +3,6 @@ export class Asistencia{
     fecha!:Date;
     horario!:number;
     id_cliente!:number;
+    nombre!:string;
+    apellido!:string;
 }

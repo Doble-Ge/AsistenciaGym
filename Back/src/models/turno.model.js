@@ -2,7 +2,6 @@ import Sequelize from 'sequelize';
 import { sequelize } from '../database/conexion';
 import Cliente from './cliente.model';
 import Cuota from './cuota.model';
-import Asistencia from './asistencia.model';
 const Turno = sequelize.define('turno', {
     id: {
         type: Sequelize.INTEGER,
@@ -34,7 +33,7 @@ const Turno = sequelize.define('turno', {
 });
 
 //Turno.hasMany(Asistencia, { foreignKey: 'id_turno', sourceKey: 'id' });
-Turno.hasMany(Cliente, { foreignKey: 'id_turno', sourceKey: 'id' })
-    //Turno.hasMany(Cuota, { foreignKey: 'id_turno', sourceKey: 'id'});
+//Turno.hasMany(Cliente, { foreignKey: 'id_turno', sourceKey: 'id' })
+//Turno.hasMany(Cuota, { foreignKey: 'id_turno', sourceKey: 'id'});
 
 export default Turno;

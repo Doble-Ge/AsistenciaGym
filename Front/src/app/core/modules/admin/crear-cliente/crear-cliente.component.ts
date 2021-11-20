@@ -33,7 +33,7 @@ export class CrearClienteComponent implements OnInit {
       console.log(resultado)
     }));
 
-    //this.routes.navigate(['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']);
+    this.routes.navigate(['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']);
     
   }
 }
