@@ -1,8 +1,9 @@
 export class Asistencia{
     id!: number;
-    fecha!:Date;
+    fecha!:string;
     horario!:number;
     id_cliente!:number;
     nombre!:string;
     apellido!:string;
+    turno!:string;
 }

@@ -13,15 +13,17 @@ export async function getAsistencia(req, res) {
 }
 
 export async function crearAsistencia(req, res) {
-    const { fecha, horario, id_cliente } = req.body;
+    const { fecha, id_cliente, nombre, apellido, turno } = req.body;
     try {
 
         let nuevoAsistencia = await Asistencia.create({
             fecha,
-            horario,
-            id_cliente
+            id_cliente,
+            nombre,
+            apellido,
+            turno
         }, {
-            fields: ['fecha', 'horario', 'id_cliente']
+            fields: ['fecha', 'id_cliente', 'nombre', 'apellido', 'turno']
         });
         if (nuevoAsistencia) {
             return res.json({

@@ -1,39 +1,6 @@
 <app-header-admin></app-header-admin>
-<div class="operacionesClientes">
-    <div>
-        <input type="text" placeholder="Buscar por apellido">
-        <button class="btn btn-success">Buscar</button>
-    </div>
-    <div>
-        <input type="text" placeholder="Buscar por dni">
-        <button class="btn btn-success">Buscar</button>
-    </div>
-    <div>
-        <input type="text" placeholder="Buscar por fecha">
-        <button class="btn btn-success">Buscar</button>
-    </div>
-</div>
 
-<div class="container divBuscador">
-    <h2>Buscador</h2>
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">Fecha</th>
-                <th scope="col">Horario</th>
-                <th scope="col">Cliente</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>fecha</td>
-                <td>horario</td>
-                <td>id_cliente</td>
 
-            </tr>
-        </tbody>
-    </table>
-</div>
 <div class="container divTable">
     <h2>Planilla de Asistencias</h2>
     <table class="table">
@@ -42,7 +9,6 @@
 
                 <th scope="col">Fecha</th>
                 <th scope="col">Horario</th>
-                <th scope="col">Cliente</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
             </tr>
@@ -51,8 +17,7 @@
             <tr *ngFor="let asistencia of arrayAsistencias">
 
                 <td>{{asistencia.fecha}}</td>
-                <td>{{asistencia.horario}}</td>
-                <td>{{asistencia.id_cliente}}</td>
+                <td>{{asistencia.turno}}</td>
                 <td>{{asistencia.nombre}}</td>
                 <td>{{asistencia.apellido}}</td>
             </tr>
@@ -65,6 +30,58 @@
 </div>
 
 <div class="button">
-    <button class="btn btn-success">Agregar</button>
+    <button class="btn btn-success" (click)="desplezarFormAgregarAsistencia()">Agregar</button>
     <button class="btn btn-danger" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']">Regresar</button>
+    <button class="btn btn-warning" (click)="mostrarDivBuscador()">Buscador</button>
+</div>
+
+
+<div *ngIf="generarAsitencia==true">
+    <div class="container divFormAsistencias">
+        <input type="text" placeholder="Nombre" #nombre>
+        <input type="text" placeholder="Apellido" #apellido>
+        <input type="text" placeholder="Fecha" #fecha>
+        <input type="text" placeholder="Turno" #turno>
+        <button class="btn btn-success" (click)="generarAsistencias(nombre.value,apellido.value,fecha.value,turno.value)">Crear</button>
+        <button class="btn btn-danger" (click)=" ocultarFormGenerarAsistencia()">Cancelar</button>
+
+    </div>
+</div>
+
+<div class="operacionesClientes" *ngIf="mostrarFormBuscador==true">
+    <div>
+        <div>
+            <input type="text" placeholder="Buscar por apellido">
+            <button class="btn btn-success">Buscar</button>
+        </div>
+        <div>
+            <input type="text" placeholder="Buscar por turno">
+            <button class="btn btn-success">Buscar</button>
+        </div>
+        <div>
+            <input type="text" placeholder="Buscar por fecha">
+            <button class="btn btn-success">Buscar</button>
+        </div>
+    </div>
+    <div class="container divBuscador">
+        <h2>Buscador</h2>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Horario</th>
+                    <th scope="col">Cliente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>fecha</td>
+                    <td>horario</td>
+                    <td>id_cliente</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button class="btn btn-danger" (click)="ocultarDivBuscador()">Cancelar</button>
 </div>

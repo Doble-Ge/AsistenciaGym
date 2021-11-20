@@ -63,4 +63,9 @@ export class ApiServiceService {
     this.auxDniCliente=dni;
   }
 
+
+
+  generarAsitencia(asistencia:Asistencia){
+    return this.http.post<Asistencia>(this.url+'api/asistencia',asistencia);
+  }
 }

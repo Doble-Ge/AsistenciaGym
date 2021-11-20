@@ -7,7 +7,7 @@ const Asistencia = sequelize.define('asistencia', {
         primaryKey: true
     },
     fecha: {
-        type: Sequelize.DATE
+        type: Sequelize.TEXT
     },
     horario: {
         type: Sequelize.INTEGER
@@ -19,6 +19,9 @@ const Asistencia = sequelize.define('asistencia', {
         type: Sequelize.TEXT
     },
     apellido: {
+        type: Sequelize.TEXT
+    },
+    turno: {
         type: Sequelize.TEXT
     }
 }, {
