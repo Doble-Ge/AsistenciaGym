@@ -1,21 +1,26 @@
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
+
 .header {
     width: 100%;
-    height: 800px;
-    background-image: url("https://wallpaperaccess.com/full/1290140.jpg");
+    height: 640px;
+    background-image: url(../../img/pilatesmujer.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .menu {
-    background-color: black;
+    background-color: #082032;
     display: flex;
     justify-content: space-around;
     opacity: 0.8;
 }
 
 .navegacion {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #082032;
 }
 
 nav>ul {
@@ -28,7 +33,7 @@ nav>ul>a {
     padding: 10px;
     text-decoration: none;
     color: white;
-    background-color: black;
+    background-color: #082032;
     border-radius: 10px;
 }
 
@@ -64,7 +69,7 @@ main>div {
 .footer {
     background-color: black;
     opacity: 0.9;
-    height: 200px;
+    height: 270px;
     width: 100%;
     color: white;
     text-align: center;
@@ -94,6 +99,18 @@ nav.redes-sociales a:last-child {
     margin-right: 10px;
 }
 
+/* Redes sociales footer*/
+nav.redes-sociales {
+    text-align: center;
+  }
+  nav.redes-sociales a {
+    color: #ffffff;
+    font-size: 2em;
+    margin-right: 20px;
+  }
+  nav.redes-sociales a:last-child{
+    margin-right: 0;
+  }
 
 
 /** Mapa **/
@@ -115,7 +132,7 @@ nav.redes-sociales a:last-child {
     border-radius: 15px;
     width: 98%;
     height: 200px;
-    background-color: rgb(121, 112, 112);
+    background-color: #343A40;
 }
 
 .infoprofesora {
@@ -128,7 +145,7 @@ nav.redes-sociales a:last-child {
     border-radius: 15px;
     width: 98%;
     height: 200px;
-    background-color: rgb(212, 68, 68);
+    background-color: #343A40;
 }
 
 .infomembresias {
@@ -141,7 +158,7 @@ nav.redes-sociales a:last-child {
     border-radius: 15px;
     width: 98%;
     height: 200px;
-    background-color: rgb(121, 112, 112);
+    background-color: #343A40;
 }
 
 .infonosotros {
@@ -153,8 +170,8 @@ nav.redes-sociales a:last-child {
     border: 1px solid black;
     border-radius: 15px;
     width: 98%;
-    height: 200px;
-    background-color: rgb(212, 68, 68);
+    height: 270px;
+    background-color: #343A40;
 }
 
 
@@ -165,3 +182,49 @@ nav.redes-sociales a:last-child {
 
 
 }*/
+
+/* botones */
+.button {
+    background-color: #889EAF;
+    padding: 10px 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+     font-family: 'Oswald', sans-serif;
+     text-decoration: none;
+     font-size: 1em;
+     margin-top: 20px;
+     display: inline-block;
+     transition: all .3s ease;
+     border: 2px solid #889EAF;
+  }
+  .button.hollow,
+  .button.hollow:hover {
+    background-color: white;
+    color: #889EAF;
+  }
+  .button.transparente {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+  }
+  .button.transparente:hover {
+    border: 2px solid #889EAF;
+  }
+  .button:hover {
+    background-color: #FF7878;
+  }
+  input[disabled].button {
+    opacity: .5;
+  }
+
+  .button.transparente {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+  }
+  .button.transparente:hover {
+    border: 2px solid #889EAF;
+  }
+
+  .color-card{
+    background-color: #506D84;
+  }
