@@ -31,8 +31,9 @@
 
 <div class="button">
     <button class="btn btn-success" (click)="desplezarFormAgregarAsistencia()">Agregar</button>
-    <button class="btn btn-danger" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']">Regresar</button>
     <button class="btn btn-warning" (click)="mostrarDivBuscador()">Buscador</button>
+    <button class="btn btn-danger" [routerLink]="['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']">Regresar</button>
+
 </div>
 
 
@@ -50,38 +51,59 @@
 
 <div class="operacionesClientes" *ngIf="mostrarFormBuscador==true">
     <div>
+
         <div>
-            <input type="text" placeholder="Buscar por apellido">
-            <button class="btn btn-success">Buscar</button>
+            <input type="text" placeholder="Buscar por apellido" #apellido>
+            <button class="btn btn-success" (click)="filtrarAsistenciasPorApellido(apellido.value)">Buscar</button>
         </div>
         <div>
-            <input type="text" placeholder="Buscar por turno">
-            <button class="btn btn-success">Buscar</button>
-        </div>
-        <div>
-            <input type="text" placeholder="Buscar por fecha">
-            <button class="btn btn-success">Buscar</button>
+            <input type="text" placeholder="Buscar por fecha" id="inputFecha" #fecha>
+            <button class="btn btn-success" (click)="filtarAsistenciasPorFecha(fecha.value)">Buscar</button>
         </div>
     </div>
     <div class="container divBuscador">
         <h2>Buscador</h2>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Fecha</th>
-                    <th scope="col">Horario</th>
-                    <th scope="col">Cliente</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>fecha</td>
-                    <td>horario</td>
-                    <td>id_cliente</td>
+        <div *ngIf="mostrarAsistenciaFecha==true">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Horario</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let asistencias of arrayAsistenciasFecha">
+                        <td>{{asistencias.fecha}}</td>
+                        <td>{{asistencias.turno}}</td>
+                        <td>{{asistencias.nombre}}</td>
+                        <td>{{asistencias.apellido}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div *ngIf="mostrarAsistenciaApellido==true">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Horario</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let asistencias of arrayAsistenciasApellido">
+                        <td>{{asistencias.fecha}}</td>
+                        <td>{{asistencias.turno}}</td>
+                        <td>{{asistencias.nombre}}</td>
+                        <td>{{asistencias.apellido}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-                </tr>
-            </tbody>
-        </table>
     </div>
     <button class="btn btn-danger" (click)="ocultarDivBuscador()">Cancelar</button>
 </div>

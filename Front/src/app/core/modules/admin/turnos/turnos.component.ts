@@ -144,8 +144,7 @@ export class TurnosComponent implements OnInit {
     //console.log("mes: "+mes + "dia:"+dia)
     let arrayTurnosPorMesyDia= this.arrayTurnos.filter((turnos)=>{
       if(turnos.mes==mes && turnos.dia==dia){
-        //console.log(turnos)
-    
+
         return true;
       }
       else{

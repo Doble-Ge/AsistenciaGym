@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiServiceService } from 'src/app/core/api-service.service';
 import { Cliente } from 'src/app/core/models/cliente';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-crear-cliente',
@@ -32,7 +33,13 @@ export class CrearClienteComponent implements OnInit {
     this.service.añadirCliente(this.nuevoCliente).subscribe((resultado=>{
       console.log(resultado)
     }));
-
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1500
+    })
     this.routes.navigate(['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU']);
     
   }

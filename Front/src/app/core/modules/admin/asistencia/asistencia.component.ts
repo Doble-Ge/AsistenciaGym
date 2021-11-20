@@ -14,6 +14,10 @@ import Swal from 'sweetalert2';
 })
 export class AsistenciaComponent implements OnInit {
  arrayAsistencias!:Asistencia[];
+ arrayAsistenciasFecha!:Asistencia[];
+ arrayAsistenciasApellido!:Asistencia[];
+ mostrarAsistenciaFecha:boolean=false;
+ mostrarAsistenciaApellido:boolean=false;
  generarAsitencia:boolean=false;
  mostrarFormBuscador:boolean=false;
  asistencia!:Asistencia;
@@ -53,7 +57,7 @@ export class AsistenciaComponent implements OnInit {
     this.routes.navigate(['/hcBWvERHhVtxfqdLn8j3LdejrxFVTU'])
   }
 
-
+  //Funciones para ocultar y mostrar formularios
   ocultarFormGenerarAsistencia(){
     this.generarAsitencia=false;
   }
@@ -64,4 +68,36 @@ export class AsistenciaComponent implements OnInit {
   ocultarDivBuscador(){
     this.mostrarFormBuscador=false;
   }
+
+
+  //----------------- Funciones para hacer busquedas y filtros -----------------
+
+  filtarAsistenciasPorFecha(fecha:string){
+    this.arrayAsistenciasFecha = this.arrayAsistencias.filter((asistenciasFechas)=>{
+      if(asistenciasFechas.fecha==fecha){
+        console.log(this.arrayAsistenciasFecha)
+        this.mostrarAsistenciaFecha=true;
+        return true;
+      }
+      else{
+        return false;
+      }
+    })
+    let input = document.getElementById("inputFecha");
+    console.log(input)
+    //input!.nodeValue="";
+  }
+  
+  filtrarAsistenciasPorApellido(apellido:string){
+    this.arrayAsistenciasApellido=this.arrayAsistencias.filter((asistencias)=>{
+      if(asistencias.apellido==apellido){
+        this.mostrarAsistenciaApellido=true;
+        return true;
+      }
+      else{
+        return false;
+      }
+    })
+  }
+
 }
