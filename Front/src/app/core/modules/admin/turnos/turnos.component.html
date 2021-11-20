@@ -55,7 +55,7 @@
                 </td>
                 <td *ngIf="turnoDiaMes.clientes.length>=8">
                     <button class="btn btn-danger" (click)="revisarTurnos(turnoDiaMes.id)">Ver inscriptos</button>
-
+                    <button class="btn btn-warning">Ocultar</button>
                 </td>
             </tr>
         </tbody>
@@ -86,7 +86,8 @@
                         <td>{{turnoCliente?.horario}}</td>
                         <td>{{turnoClientes?.apellido}}</td>
                         <td>{{turnoClientes?.nombre}}</td>
-                        <td><button class="btn btn-primary" (click)="mostrarTurnoCliente(turnoCliente.id,turnoCliente.descripcion,turnoCliente.horario,turnoCliente.id_cliente,turnoClientes.nombre,turnoClientes.apellido)">Editar</button></td>
+                        <td><button class="btn btn-primary" (click)="mostrarTurnoCliente(turnoCliente.id,turnoCliente.descripcion,turnoCliente.horario,turnoCliente.id_cliente,turnoClientes.nombre,turnoClientes.apellido)">Editar</button>
+                            <button class="btn btn-warning" (click)="ocultarDivForm()">Ocultar</button></td>
                     </tr>
 
                 </tbody>
@@ -114,7 +115,6 @@
                     <input type="text" placeholder="Horario" id="horario" value={{auxHorario}}>
                     <div>
                         <button class="btn btn-success">Modificar</button>
-                        <button class="btn btn-danger">Cancelar</button>
                     </div>
 
 

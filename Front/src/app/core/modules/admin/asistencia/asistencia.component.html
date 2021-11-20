@@ -43,7 +43,7 @@
         <input type="text" placeholder="Apellido" #apellido>
         <input type="text" placeholder="Fecha" #fecha>
         <input type="text" placeholder="Turno" #turno>
-        <button class="btn btn-success" (click)="generarAsistencias(nombre.value,apellido.value,fecha.value,turno.value)">Crear</button>
+        <button class="btn btn-success" (click)="generarAsistencias(nombre.value,apellido.value,fecha.value,turno.value)">Agregar</button>
         <button class="btn btn-danger" (click)=" ocultarFormGenerarAsistencia()">Cancelar</button>
 
     </div>
@@ -71,6 +71,7 @@
                         <th scope="col">Horario</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
+                        <th scope="col">Cantidad de asistencias</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -79,6 +80,7 @@
                         <td>{{asistencias.turno}}</td>
                         <td>{{asistencias.nombre}}</td>
                         <td>{{asistencias.apellido}}</td>
+                        <td>{{arrayAsistenciasApellido.length}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -91,6 +93,7 @@
                         <th scope="col">Horario</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
+                        <th scope="col">Cantidad de asistencias</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -99,6 +102,7 @@
                         <td>{{asistencias.turno}}</td>
                         <td>{{asistencias.nombre}}</td>
                         <td>{{asistencias.apellido}}</td>
+                        <td>{{arrayAsistenciasApellido.length}}</td>
                     </tr>
                 </tbody>
             </table>

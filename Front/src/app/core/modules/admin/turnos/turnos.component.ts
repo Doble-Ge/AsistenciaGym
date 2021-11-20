@@ -173,7 +173,8 @@ export class TurnosComponent implements OnInit {
     //console.log("nomnbre:"+this.camposFormTurnosCliente.nombre)
   }
 
-  editarTurnoCliente(){
+  ocultarDivForm(){
+    this.mostrarForm=false;
   }
   
   }
